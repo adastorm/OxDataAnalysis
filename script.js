@@ -1,4 +1,5 @@
-// Total Sale Value
+// COMMODITIES STATS
+// Total Sales
 
 const labels = [
 	"Animal Feed",
@@ -89,8 +90,8 @@ const config = {
 	options: {},
 };
 
-const myChart = new Chart(
-    document.getElementById("myChart1"),
+const TotalSalesChart = new Chart(
+    document.getElementById("totalSalesChart"),
     config
 );
 
