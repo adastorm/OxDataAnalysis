@@ -1,7 +1,7 @@
 // COMMODITIES STATS
 // Total Sales
 
-const labels = [
+const commodityCatergories = [
 	"Animal Feed",
 	"Banana plantain",
 	"Beans",
@@ -38,15 +38,16 @@ const labels = [
 	"Wood",
 ];
 
-const data = {
-	labels: labels,
+const totalSalesData = {
+	labels: commodityCatergories,
 	datasets: [
 		{
 			label: "Total Sale Value",
 			backgroundColor: "rgb()",
 			borderColor: "rgb(255, 99, 132)",
 			data: [
-				[1970050],
+                [22163193],
+                [1970050],
 				[30000],
 				[1003800],
 				[156000],
@@ -84,19 +85,133 @@ const data = {
 	],
 };
 
-const config = {
+const totalSalesConfig = {
 	type: "bar",
-	data: data,
+	data: totalSalesData,
 	options: {},
 };
 
 const TotalSalesChart = new Chart(
     document.getElementById("totalSalesChart"),
-    config
+    totalSalesConfig
 );
 
 
 
 
 
+// CLIENT STATS
+
+//Reoccuring Customers
+
+const customerCategories = [["20+"],["10-20"], ["5-10"], ["2-5"], ["1"]];
+const customerCategoriesData = [[50], [50], [82], [351], [467]];
+
+const categoryData = {
+    labels: customerCategories,
+	datasets: [
+		{
+			label: "Total Sale Value",
+			backgroundColor: [
+				"rgba(255, 99, 132, 0.2)",
+				"rgba(54, 162, 235, 0.2)",
+				"rgba(255, 206, 86, 0.2)",
+				"rgba(75, 192, 192, 0.2)",
+				"rgba(153, 102, 255, 0.2)",
+			],
+			borderColor: [
+				"rgba(255, 99, 132, 1)",
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+				"rgba(75, 192, 192, 1)",
+				"rgba(153, 102, 255, 1)",
+			],
+			data: customerCategoriesData,
+			borderWidth: 5,
+		},
+	],
+};
+
+const customerCategoryConfig = {
+	type: "bar",
+	data: categoryData,
+    options: {
+    },
+};
+
+const CustomerCatergoriesChart = new Chart(
+	document.getElementById("customerCategories"),
+	customerCategoryConfig
+);
+
+//Pie Chart
+const customerCategoryConfigPie = {
+	type: "pie",
+	data: categoryData,
+	options: {},
+};
+
+const CustomerCatergoriesPieChart = new Chart(
+	document.getElementById("customerCategoriesPie"),
+	customerCategoryConfigPie
+);
+
+
+
+//DEPOT STATS
+//Total Per Depot Stats
+
+const detpotCategories = [["Kayove Depot"], ["Kiyovu Depot"], ["LHS"], ["Ngororero Depot"], ["Tyazo Depot"]];
+const depotTotalNum = [[65673139], [1009400], [36522446], [1232100], [99796888.8]];
+const depotAverageNum = [[25896.34819],[19045.28302],[137820.5509],[17353.52113],[51869.48482]];
+
+const totalDepotData = {
+	labels: detpotCategories,
+	datasets: [
+		{
+			label: "Total Sale Per Depot",
+			backgroundColor: "rgb()",
+			borderColor: "rgb(255, 99, 132)",
+			data: depotTotalNum,
+		},
+	],
+};
+
+const totalDepotConfig = {
+	type: "bar",
+	data: totalDepotData,
+	options: {},
+};
+
+const TotalDepotChart = new Chart(
+	document.getElementById("depotGraphTotal"),
+	totalDepotConfig
+);
+
+
+
+//Average per Depot
+
+const averageDepotData = {
+	labels: detpotCategories,
+	datasets: [
+		{
+			label: "Total Sale Per Depot",
+			backgroundColor: "rgb()",
+			borderColor: "rgb(255, 99, 132)",
+			data: depotAverageNum,
+		},
+	],
+};
+
+const averageDepotConfig = {
+	type: "bar",
+	data: totalDepotData,
+	options: {},
+};
+
+const AverageDepotChart = new Chart(
+	document.getElementById("averageDepotGraph"),
+	averageDepotConfig
+);
 

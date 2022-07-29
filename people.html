@@ -10,10 +10,12 @@
 
 	<body>
 		<!-- content for the header -->
-		<div class="header">
-            <img src="images/ox_logo.png">
-			<h1>Ox Data Report</h1>
-		</div>
+        <div class="header">
+            <a href="home.html">
+                <img src="images/ox_logo.png">
+                <h1>Ox Data Report</h1>
+            </a>
+        </div>
 
 		<!-- content for the topnav -->
 		<div class="topnav">
@@ -25,9 +27,28 @@
 
 		<!-- main body of the page  -->
 		<div class="body">
-			<h1 class="footer">CLient Statistics Page</h1>
+			<h1 class="footer">Client Statistics Page</h1>
 		</div>
 
+        <!-- First chart based on customer customerCategories -->
+        <div class="container">
+            <div class="graph">
+                <canvas id="customerCategories"></canvas>   
+            </div>
+            <div class="text">
+                <h2>The majority of OX customers are one time customers, some that are using the service 2-5 times, but only a few use it more. </h2>
+            </div>
+        </div>
+
+        <!-- Pie Chart version of the customer categories -->
+        <div class="container">
+            <div class="text">
+                <h2>One time users are around half of all the platforms users </h2>
+            </div>            
+            <div class="graph" style="flex-basis: 35%;">
+                <canvas id="customerCategoriesPie"></canvas>
+            </div>
+        </div>
 
 		<!-- The class for the footer -->
 		<div class="footer">
