@@ -1,7 +1,7 @@
 //DATE STATS
 //Total Per Depot Stats
 
-const dateCategories = [[1], [2], [3], [4], [5], [6], [7]];
+const dateCategories = [["Sunday"], ["Monday"], ["Tuesday"], ["Wednesday"], ["Thursday"], ["Friday"], ["Saturday"]];
 const dateTotalNum = [[87], [1792], [2298], [3544], [4235], [4848], [3913]];
 
 const totalDateData = {
@@ -18,13 +18,13 @@ const totalDateData = {
 
 const totalDateConfig = {
 	type: "bar",
-	data: totalDepotData,
+	data: totalDateData,
 	options: {},
 };
 
 const TotalDatetChart = new Chart(
-	document.getElementById("DateCategories"),
-	totalDatetConfig
+	document.getElementById("dateCategories"),
+	totalDateConfig
 );
 
 //Average per Depot
