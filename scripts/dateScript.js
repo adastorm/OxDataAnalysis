@@ -27,27 +27,4 @@ const TotalDatetChart = new Chart(
 	totalDateConfig
 );
 
-//Average per Depot
 
-// const averageDepotData = {
-// 	labels: detpotCategories,
-// 	datasets: [
-// 		{
-// 			label: "Total Sale Per Depot",
-// 			backgroundColor: "rgb()",
-// 			borderColor: "rgb(255, 99, 132)",
-// 			data: depotAverageNum,
-// 		},
-// 	],
-// };
-
-// const averageDepotConfig = {
-// 	type: "bar",
-// 	data: averageDepotData,
-// 	options: {},
-// };
-
-// const AverageDepotChart = new Chart(
-// 	document.getElementById("averageDepotCategories"),
-// 	averageDepotConfig
-// );

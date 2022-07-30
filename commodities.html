@@ -11,7 +11,7 @@
 	<body>
         <!-- content for the header -->
         <div class="header">
-            <a href="home.html">
+            <a href="index.html">
                 <img src="images/ox_logo.png">
                 <h1>Ox Data Report</h1>
             </a>
@@ -19,7 +19,7 @@
 
 		<!-- content for the topnav -->
 		<div class="topnav">
-			<a href="home.html"> Home </a>
+			<a href="index.html"> Home </a>
 			<a href="depot.html"> Depot Stats </a>
 			<a href="people.html"> Client Stats </a>
             <a href="commodities.html"> Commodity Stats </a>
@@ -31,9 +31,25 @@
 			<h1 class="footer">Commodities Statistics Page</h1>
 		</div>
 
-        <div>
-             <canvas id="totalSalesChart"></canvas>
-        </div>
+		<!-- First chart based on customer customerCategories -->
+		<div class="container">
+			<div class="graph" style="flex-basis:90%;">
+				<canvas id="totalSalesChart"></canvas>
+			</div>
+			<div class="text">
+				<h2>Total sale value of resources </h2>
+			</div>
+		</div>
+
+		<!-- First chart based on customer customerCategories -->
+		<div class="container">
+			<div class="text">
+				<h2>Most Profitable Commodities per Kilogram </h2>
+			</div>
+			<div class="graph">
+				<canvas id="vpkSalesChart"></canvas>
+			</div>
+		</div>
 
 		<!-- The class for the footer -->
 		<div class="footer">
@@ -41,5 +57,5 @@
             <a href="https://adastorm.github.io/linktree/">Jonah Watts</a>
 		</div>
 	</body>
-	<script src="script.js"></script>
+	<script src="scripts/script.js"></script>
 </html>

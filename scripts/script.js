@@ -38,6 +38,23 @@ const commodityCatergories = [
 	"Wood",
 ];
 
+const vpkCommodityCatergories = [
+	["Animal Feed"],
+	["Cassava"],
+	["Clay"],
+	["Coffee Cherries"],
+	["Dried Coffee"],
+	["Fertilizer"],
+	["Fruits"],
+	["Furniture"],
+	["Maize Flour"],
+	["Others"],
+	["Potatoes"],
+	["Soy"],
+	["Sweet Potatoes"],
+	["Wood"]
+];
+
 const totalSalesData = {
 	labels: commodityCatergories,
 	datasets: [
@@ -95,6 +112,46 @@ const TotalSalesChart = new Chart(
     document.getElementById("totalSalesChart"),
     totalSalesConfig
 );
+
+const vpkSalesData = {
+	labels: vpkCommodityCatergories,
+	datasets: [
+		{
+			label: "Total Sale Value",
+			backgroundColor: "rgb()",
+			borderColor: "rgb(255, 99, 132)",
+			data: [
+				[19.83182233],
+				[18.53846154],
+				[35],
+				[10.29761905],
+				[15.74706349],
+				[14.54901961],
+				[15],
+				[23.33333333],
+				[15.3],
+				[16.32307692],
+				[26.1],
+				[20],
+				[20],
+				[1200],
+			],
+		},
+	],
+};
+
+const vpkSalesConfig = {
+	type: "bar",
+	data: vpkSalesData,
+	options: {},
+};
+
+const vpkSalesChart = new Chart(
+	document.getElementById("vpkSalesChart"),
+	vpkSalesConfig
+);
+
+
 
 
 
