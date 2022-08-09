@@ -259,6 +259,7 @@ const lineChartData = {
 			],
 			backgroundColor: "rgba(141,166,166,65)",
 			borderColor: "rgba(141,166,166,65)",
+			yAxisID: 'y',
 		},
 		{
 			label: "Number of Orders",
@@ -268,6 +269,7 @@ const lineChartData = {
 			],
 			backgroundColor: "rgba(52,64,57,25)",
 			borderColor: "rgba(52,64,57,25)",
+			yAxisID: 'y1',
 		},
 		{
 			label: "KG Moved",
@@ -278,6 +280,7 @@ const lineChartData = {
 			],
 			backgroundColor: "rgba(187,191,170,75)",
 			borderColor: "rgba(187,191,170,75)",
+			yAxisID: 'y',
 		},
 	],
 };
@@ -292,8 +295,25 @@ const lineChartConfig = {
 				text: "Line Graph Comparison",
 			},
 		},
-        responsive: true,
-	},
+		responsive: true,
+		scales: {
+			y: {
+				type: 'linear',
+				display: true,
+				position: 'left',
+			},
+			y1: {
+				type: 'linear',
+				display: true,
+				position: 'right',
+
+				// grid line settings
+				grid: {
+					drawOnChartArea: false, // only want the grid lines for one axis to show up
+				},
+			},
+		},
+	}
 };
 
 const lineChart = new Chart(
