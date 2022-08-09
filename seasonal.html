@@ -28,29 +28,28 @@
         <a href="seasonal.html"> Seasonal </a>
     </div>
 
-
     <!-- main body of the page  -->
     <div class="body">
-        <h1 class="footer">Date Statistics Page</h1>
+        <h1 class="footer">Depot Statistics Page</h1>
     </div>
 
-    <!-- First chart based on customer customerCategories -->
+    <!-- First chart based on quarters -->
     <div class="container">
-        <div class="graph">
-            <canvas id="dateCategories"></canvas>
+        <div class="graph" style="flex-basis:90%;">
+            <canvas id="SBC"></canvas>
         </div>
         <div class="text">
-            <h2>Total Amout of orders of each day of the week </h2>
+            <h2>Sales of product per quarter </h2>
         </div>
     </div>
 
-    <!-- First chart based on customer customerCategories -->
+    <!-- Chart to Graph different trends -->
     <div class="container">
         <div class="text">
-            <h2>Total Amout of orders per station of each day of the week </h2>
+            <h2>Trendlines over the year </h2>
         </div>
-        <div class="graph">
-            <canvas id="dateDepotChart"></canvas>
+        <div class="graph" style="flex-basis:90%;">
+            <canvas id="lineGraph"></canvas>
         </div>
     </div>
 
@@ -60,7 +59,8 @@
         Made for OX by
         <a href="https://adastorm.github.io/linktree/">Jonah Watts</a>
     </div>
+    <script src="scripts/seasonal.js"></script>
 </body>
-<script src="scripts/dateScript.js"></script>
+
 
 </html>

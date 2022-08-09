@@ -51,8 +51,7 @@ const vpkCommodityCatergories = [
 	["Others"],
 	["Potatoes"],
 	["Soy"],
-	["Sweet Potatoes"],
-	["Wood"]
+	["Sweet Potatoes"]
 ];
 
 const totalSalesData = {
@@ -134,7 +133,6 @@ const vpkSalesData = {
 				[26.1],
 				[20],
 				[20],
-				[1200],
 			],
 		},
 	],
@@ -150,7 +148,4 @@ const vpkSalesChart = new Chart(
 	document.getElementById("vpkSalesChart"),
 	vpkSalesConfig
 );
-
-
-
 

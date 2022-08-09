@@ -52,3 +52,8 @@ const CustomerCatergoriesPieChart = new Chart(
 	document.getElementById("customerCategoriesPie"),
 	customerCategoryConfigPie
 );
+
+
+
+
+
